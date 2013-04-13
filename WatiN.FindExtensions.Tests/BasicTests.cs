@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WatiN.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting.Web;
 
-namespace WatiN.ScopeExtensions.Tests
+namespace WatiN.FindExtensions.Tests
 {
     [TestClass]
     public class BasicTests

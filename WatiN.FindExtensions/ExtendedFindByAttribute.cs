@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WatiN.Core;
 
-namespace WatiN.ScopeExtensions
+namespace WatiN.FindExtensions
 {
     public class ExtendedFindByAttribute : FindByAttribute
     {

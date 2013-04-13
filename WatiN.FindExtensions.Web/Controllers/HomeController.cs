@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WatiN.ScopeExtensions.Web.Controllers
+namespace WatiN.FindExtensions.Web.Controllers
 {
     public class HomeController : Controller
     {
