@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WatiN.ScopeExtensions
 {
-    public class Class1
+    public static class Find
     {
+        
     }
 }
