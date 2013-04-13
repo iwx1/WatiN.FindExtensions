@@ -8,7 +8,7 @@ namespace WatiN.FindExtensions.Tests
     [TestClass]
     public class FindByLabelTextTests
     {
-        private const string url = "http://localhost:31337/";
+        private readonly string url = Properties.Settings.Default.Url;
 
         public class HomeIndexPage : Page
         {
@@ -24,15 +24,6 @@ namespace WatiN.FindExtensions.Tests
             // missing : at the end of the label regex
             [ExtendedFindBy(LabelTextRegex = "^First Name$")]
             public TextField FirstNameNotFoundByLabelTextRegex { get; set; }
-        }
-
-        [TestMethod]
-        public void Confirm_site_is_running()
-        {
-            using (var browser = new IE(url))
-            {
-                Assert.IsTrue(browser.ContainsText("Index"));
-            }
         }
 
         [TestMethod]

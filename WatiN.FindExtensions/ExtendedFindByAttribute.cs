@@ -22,6 +22,9 @@ namespace WatiN.FindExtensions
 
         public string LabelText { get; set; }
         public string LabelTextRegex { get; set; }
+        public string GenericAttributeName { get; set; }
+        public string GenericAttributeValue { get; set; }
+        public string GenericAttributeValueRegex { get; set; }
 
         protected override Constraint GetConstraint()
         {
@@ -34,9 +37,24 @@ namespace WatiN.FindExtensions
 
                 Combine(ref constraint, CreateStringConstraint(Find.ByLabelText, LabelText));
                 Combine(ref constraint, CreateRegexConstraint(Find.ByLabelText, LabelTextRegex));
+                Combine(ref constraint, CreateGenericAttributeStringConstraint(Find.By, GenericAttributeName, GenericAttributeValue));
+                Combine(ref constraint, CreateGenericAttributeRegexConstraint(Find.By, GenericAttributeName, GenericAttributeValueRegex));
             }
 
             return constraint ?? Find.Any;
+        }
+
+        private delegate Constraint GenericAttributeStringConstraintFactory(string attributeName, string attributeValue);
+        private delegate Constraint GenericAttributeRegexConstraintFactory(string attributeName, Regex attributeValue);
+
+        private static Constraint CreateGenericAttributeRegexConstraint(GenericAttributeRegexConstraintFactory factory, string attributeName, string attributeValue)
+        {
+            return attributeName != null && attributeValue != null ? factory(attributeName, new Regex(attributeValue)) : null;
+        }
+
+        private static Constraint CreateGenericAttributeStringConstraint(GenericAttributeStringConstraintFactory factory, string attributeName, string attributeValue)
+        {
+            return attributeName != null && attributeValue != null ? factory(attributeName, attributeValue) : null;
         }
 
 
