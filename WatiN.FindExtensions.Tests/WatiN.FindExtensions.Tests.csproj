@@ -62,11 +62,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BasicTests.cs" />
+    <Compile Include="FindByLabelTextTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WatiN.FindExtensions\WatiN.FindExtensions.csproj">
+      <Project>{cd151d26-5bdf-4318-b02e-d5d4b47319a1}</Project>
+      <Name>WatiN.FindExtensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

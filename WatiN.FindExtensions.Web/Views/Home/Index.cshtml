@@ -4,3 +4,20 @@
 }
 
 <h2>Index</h2>
+
+@using(Html.BeginForm()) 
+{
+<div>
+    <div class="row">
+        <label for="firstName">First Name:</label>
+        <input id="firstName" name="firstName" />
+    </div>
+
+    <div class="row">
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" name="firstName" />
+    </div>
+
+    <input type="submit" value="Submit" />
+</div>
+}
