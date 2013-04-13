@@ -1,18 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatiN.ScopeExtensions", "WatiN.ScopeExtensions\WatiN.ScopeExtensions.csproj", "{CD151D26-5BDF-4318-B02E-D5D4B47319A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatiN.FindExtensions", "WatiN.FindExtensions\WatiN.FindExtensions.csproj", "{CD151D26-5BDF-4318-B02E-D5D4B47319A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "git", "git", "{CC1AC0A0-A6E9-4EB9-8852-0A54CA158D60}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatiN.ScopeExtensions.Web", "WatiN.ScopeExtensions.Web\WatiN.ScopeExtensions.Web.csproj", "{F84C834C-1174-454B-B04B-F23F03448A68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatiN.FindExtensions.Web", "WatiN.FindExtensions.Web\WatiN.FindExtensions.Web.csproj", "{F84C834C-1174-454B-B04B-F23F03448A68}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{446D0B3E-9E01-40D4-8618-7164EE3BDBF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatiN.ScopeExtensions.Tests", "WatiN.ScopeExtensions.Tests\WatiN.ScopeExtensions.Tests.csproj", "{EFA5C684-7CC7-48C7-A28B-0856158AF4C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatiN.FindExtensions.Tests", "WatiN.FindExtensions.Tests\WatiN.FindExtensions.Tests.csproj", "{EFA5C684-7CC7-48C7-A28B-0856158AF4C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

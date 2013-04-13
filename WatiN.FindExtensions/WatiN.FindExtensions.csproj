@@ -7,8 +7,8 @@
     <ProjectGuid>{CD151D26-5BDF-4318-B02E-D5D4B47319A1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WatiN.ScopeExtensions</RootNamespace>
-    <AssemblyName>WatiN.ScopeExtensions</AssemblyName>
+    <RootNamespace>WatiN.FindExtensions</RootNamespace>
+    <AssemblyName>WatiN.FindExtensions</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

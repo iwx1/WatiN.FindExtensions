@@ -6,8 +6,8 @@
     <ProjectGuid>{EFA5C684-7CC7-48C7-A28B-0856158AF4C0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WatiN.ScopeExtensions.Tests</RootNamespace>
-    <AssemblyName>WatiN.ScopeExtensions.Tests</AssemblyName>
+    <RootNamespace>WatiN.FindExtensions.Tests</RootNamespace>
+    <AssemblyName>WatiN.FindExtensions.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
