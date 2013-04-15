@@ -26,6 +26,7 @@ namespace WatiN.FindExtensions
         public string GenericAttributeName { get; set; }
         public string GenericAttributeValue { get; set; }
         public string GenericAttributeValueRegex { get; set; }
+        public string CssSelectorText { get; set; }
         public string LabelText { get; set; }
         public string LabelTextRegex { get; set; }
         public string RelText { get; set; }
@@ -44,6 +45,7 @@ namespace WatiN.FindExtensions
                 Combine(ref constraint, CreateStringConstraint(Find.Near, NearText));
                 Combine(ref constraint, CreateStringConstraint(Find.ByLabelText, LabelText));
                 Combine(ref constraint, CreateRegexConstraint(Find.ByLabelText, LabelTextRegex));
+                Combine(ref constraint, CreateStringConstraint(Find.BySelector, CssSelectorText));
                 Combine(ref constraint, CreateAncestorSelectorStringConstraint(Find.ByExistenceOfRelatedElement<Element>, AncestorAttributeName, AncestorAttributeValue));
                 Combine(ref constraint, CreateAncestorSelectorRegexConstraint(Find.ByExistenceOfRelatedElement<Element>, AncestorAttributeName, AncestorAttributeValueRegex));
                 Combine(ref constraint, CreateGenericAttributeStringConstraint(Find.By, "rel", RelText));
