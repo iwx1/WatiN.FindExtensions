@@ -43,3 +43,75 @@ This works really, really well.  Nice job, Jeroen van Menen and all contributors
 Here's where my problem comes in though.  I want to use page classes, but sometimes, I can't locate the elements I need based on the constraints accessible through the default FindByAttribute class (Alt, AltRegex, Class, ClassRegex, For, ForRegex, Id, IdRegex, Name, NameRegex, Text, TextRegex, Url, UrlRegex, Title, TitleRegex, Value, ValueRegex, Src, SrcRegex, Index).  In fact, WatiN has all the constraints I already want to use, but they aren't exposed as an attribute.
 
 That's where the WatiN.FindExtensions come in.  This library will expose those additional constraints in an extended FindBy attribute for those of you who which to do more complex element lookups.
+
+##Usage
+
+The following element lookup methods have been added into the FindByAttribute:
+
+- Ancestor attribute (value and regex)
+		
+		<div id="relatedElementParent">
+			<input type="text" />
+		</div>
+
+		[ExtendedFindBy(AncestorAttributeName = "id", AncestorAttributeValue = "relatedElementParent")]
+		public TextField MyTextField { get;set; }
+
+		[ExtendedFindBy(AncestorAttributeName = "id", AncestorAttributeValueRegex = "^related")]
+		public TextField MyTextField { get; set; }
+
+- Generic Attribute (value and regex)
+
+		<input type="text" data-extra-id="identifier of some sort" />
+
+		[ExtendedFindBy(GenericAttributeName = "data-extra-id", GenericAttributeValue = "identifier of some sort")]
+		public TextField MyTextField { get; set; }
+
+		[ExtendedFindBy(GenericAttributeName = "data-extra-id", GenericAttributeValueRegex = "^identifier of some sort$")]
+		public TextField MyTextField { get; set; }
+
+- Css Selector
+
+		<div>
+			<div class="row">
+				<label for="fieldId">Field Label:</label>
+				<input id="fieldId" type="text" />
+			</div>
+		</div>
+
+		[ExtendedFindBy(CssSelectorText = "#fieldId")]
+		public TextField MyTextField { get; set; }
+
+		[ExtendedFindBy(CssSelectorText = "div > div.row > label")]
+		public Label MyLabel { get; set; }
+
+- Label Text (value and regex)
+
+	*Note: For this to work, the label must have a "for" value of the control you're trying to locate.*
+
+		<label for="randomlygeneratedid">First Name:</label>
+		<input id="randomlygeneratedid" type="text" />
+
+		[ExtendedFindBy(LabelText = "First Name:")]
+		public TextField MyTextField { get; set; }
+
+		[ExtendedFindBy(LabelTextRegex = "^First")]
+		public TextField MyTextField { get; set; }
+
+- Rel Text (value and regex)
+
+		<input rel="first-name" type="text" />
+
+		[ExtendedFindBy(RelText = "first-name")]
+		public TextField MyTextField { get; set; }
+
+		[ExtendedFindBy(RelTextRegex = "^first-")]
+		public TextField MyTextField { get; set; }
+
+- Near Text (See the WatiN documentation regarding the Near constraint)
+
+		<label>First Name:</label>
+		<input type="text" />
+
+		[ExtendedFindBy(NearText = "First Name:")]
+		public TextField MyTextField { get; set; }
