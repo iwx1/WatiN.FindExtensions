@@ -62,7 +62,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="FindByAncestorTests.cs" />
     <Compile Include="FindByLabelTextTests.cs" />
+    <Compile Include="FindByRelTests.cs" />
+    <Compile Include="FindNearTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FindByGenericAttributeTests.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

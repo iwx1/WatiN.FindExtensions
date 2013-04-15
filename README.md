@@ -2,7 +2,7 @@
 
 ##Introduction
 
-The WatiN.FindExtensions library was created partially as an experiment with GitHub, but also to address an issue I was running into when using WatiN (a .net browser automation library).
+The WatiN.FindExtensions library was created partially as an experiment with GitHub, but also to address an issue I was running into when using [WatiN](http://watin.org/) (a .net browser automation library).
 
 In WatiN, there is a Page class which can be used to [encapsulate page functionality](http://watinandmore.blogspot.com/2009/06/introducing-page-class.html).  The purpose is to reduce the duplicated code in tests for locating elements on any given page in your test application.  Let's look at a couple examples (using MSTest) using the DRY and not DRY approaches.
 

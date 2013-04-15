@@ -10,12 +10,16 @@
 <div>
     <div class="row">
         <label for="firstName">First Name:</label>
-        <input id="firstName" name="firstName" data-extra-id="data-firstName" />
+        <input id="firstName" name="firstName" type="text" data-extra-id="data-firstName" rel="first-name" />
     </div>
 
     <div class="row">
-        <label for="lastName">Last Name:</label>
-        <input id="lastName" name="firstName" data-extra-id="data-lastName" />
+        <label>Last Name:</label>
+        <input id="lastName" name="firstName" type="text" data-extra-id="data-lastName" rel="last-name" />
+    </div>
+
+    <div id="relatedElementParent">
+        <input type="text" value="child" />
     </div>
 
     <input type="submit" value="Submit" />
